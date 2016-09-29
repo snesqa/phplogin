@@ -12,9 +12,9 @@
 	<div class="contact-wrapper">
 		<form action="loginlogic.php" method="post">
 			Email*</i>
-			<input type="email" name="email" required>
+			<input type="email" name="email">
 			Password*
-			<input type="password" name="password" required>
+			<input type="password" name="password">
 			<input type="submit" name="submitReg" value="Login">
 		</form>
 		<a  href="register.php">Sign up</a>

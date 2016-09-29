@@ -10,23 +10,22 @@
 
 	if ($link->connect_error) {
 		die('connect error ('.$link->connect_errno.') '.$link->connect_error);
-
-}/*
-	$link->set_charset('utf8');
-
-	const DB_HOST = 'webhost';
-	const DB_USER = 'sneska';
-	const DB_PASS = 'secret';
-	const DB_NAME = 'mydbname';
-
-
-	$link = new mysqli( DB_HOST, DB_USER, DB_PASS ,DB_NAME );
-
-	if ($link->connect_error) {
-		die('connect error ('.$link->connect_errno.') '.$link->connect_error);
-
 }
-	$link->set_charset('utf8');
-*/
+/*
+	$servername = "localhost";
+	$username = "root";
+	$password = "root";
+
+	try {
+	    $conn = new PDO("mysql:host=$servername;dbname=phplogin", $username, $password);
+	    // set the PDO error mode to exception
+	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	    echo "Connected successfully";
+	    }
+	catch(PDOException $e)
+	    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+}*/
 
 ?>

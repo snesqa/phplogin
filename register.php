@@ -10,9 +10,9 @@
 <div class="contact-wrapper">
 <form action="registerlogic.php" method="post">
 Email*
-<input type="email" name="email" required>
+<input type="email" name="email">
 Password*
-<input type="password" name="password" required>
+<input type="password" name="password">
 <input type="submit" name="submitReg" value="Sign up">
 </form>
 <span class="required">required field*</span>

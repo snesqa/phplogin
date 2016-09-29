@@ -1,7 +1,7 @@
 <?php  
 session_start();
+ob_start();
  	require_once('dbconst.php');
-
 
 	$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) or die($email_error_msg);
 	$password = filter_input(INPUT_POST, 'password') or die($password_error_msg); 
@@ -9,12 +9,9 @@ session_start();
 	$password_error_msg = 'Wrong password';
 	//echo $email;
 	
-	
-
-   $sql = "SELECT id, password FROM login_users where email=?";
+    $sql = "SELECT id, password FROM login_users where email=?";
 	
 	$stmt = $link->prepare($sql);
-    
     $stmt->bind_param('s', $email);
     $stmt->execute();
     $stmt->bind_result($id, $phash);
