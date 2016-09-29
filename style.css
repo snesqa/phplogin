@@ -47,9 +47,9 @@ input[type="submit"], button {
 	font-family: 'latolight', arial, helvetica, sans-serif;
 	font-style: italic;
 	font-weight: lighter;
-	-webkit-box-shadow: 24px 22px 54px -30px rgba(85,88,105,1);
-	-moz-box-shadow: 24px 22px 54px -30px rgba(85,88,105,1);
-	box-shadow: 24px 22px 54px -30px rgba(85,88,105,1);
+	-webkit-box-shadow: 24px 22px 54px -30px rgba(85,88,105,0.56);
+	-moz-box-shadow: 24px 22px 54px -30px rgba(85,88,105,0.56);
+	box-shadow: 24px 22px 54px -30px rgba(85,88,105,0.56);
 }
 .contact-wrapper h1{
 	font-size:1.1rem;

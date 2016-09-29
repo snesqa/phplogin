@@ -3,13 +3,12 @@ session_start();
  	require_once('dbconst.php');
 
 
-	$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) or die($email_error_msg);
-	$password = filter_input(INPUT_POST, 'password') or die($password_error_msg); 
-	$email_error_msg = 'Retype email';
-	$password_error_msg = 'Wrong password';
+	$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) or die('Missing or illegal parameter');
+	$password = filter_input(INPUT_POST, 'password') or die('Missing or illegal parameter'); 
+	
 	//echo $email;
-	
-	
+	//echo $name;
+	//echo $sql;
 
    $sql = "SELECT id, password FROM login_users where email=?";
 	
@@ -30,7 +29,24 @@ if (!isset($_SESSION['uid'])){
 	header("location: index.php");
 }
 else {
-	header("location: restricted.php");
+	echo 'log in success yay';
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tillykke</title>
+</head>
+<body>
+
+
+<?php
+
+?>
+
+<a href="restricted.php">Hemmelig info</a>
+	
+</body>
+</html>
