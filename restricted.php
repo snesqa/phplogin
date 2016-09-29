@@ -9,6 +9,7 @@ ob_start();
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="author" content="Snezana Ilic" />
 	<title>Restricted</title>
 </head>
 <body>

@@ -1,5 +1,5 @@
 <?php 
-/*
+
 	const DB_HOST = 'localhost';
 	const DB_USER = 'root';
 	const DB_PASS = 'root';
@@ -11,9 +11,8 @@
 	if ($link->connect_error) {
 		die('connect error ('.$link->connect_errno.') '.$link->connect_error);
 
-}
+}/*
 	$link->set_charset('utf8');
-*/
 
 	const DB_HOST = 'webhost';
 	const DB_USER = 'sneska';
@@ -28,5 +27,6 @@
 
 }
 	$link->set_charset('utf8');
+*/
 
 ?>

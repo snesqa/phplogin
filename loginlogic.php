@@ -29,24 +29,7 @@ if (!isset($_SESSION['uid'])){
 	header("location: index.php");
 }
 else {
-	echo 'log in success yay';
+	header("location: restricted.php");
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>tillykke</title>
-</head>
-<body>
-
-
-<?php
-
-?>
-
-<a href="restricted.php">Hemmelig info</a>
-	
-</body>
-</html>
