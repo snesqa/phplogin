@@ -12,9 +12,14 @@ $sql = 'INSERT INTO login_users ( email , password) VALUES ( ? , ? )';
 	$stmt = $link->prepare($sql); 
 	$stmt->bind_param('ss', $email, $phash);
 	$stmt->execute();
-//echo 'inserted '.$email.' as id:'.($stmt->insert_id);
+	//echo 'inserted '.$email.' as id:'.($stmt->insert_id); // id for inserted record
 	//echo 'Your username is '.$email.' go to <a href="index.php">login</a>'
-	header("location: index.php");
+	header("location: index.php?signup=true");
+/*
+if(empty($email)){
+
+}
+*/
 ?>
 
 

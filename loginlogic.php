@@ -12,9 +12,9 @@ ob_start();
     $sql = "SELECT id, password FROM login_users where email=?";
 	
 	$stmt = $link->prepare($sql);
-    $stmt->bind_param('s', $email);
+    $stmt->bind_param('s', $email); //use bind_param if there is a placeholder
     $stmt->execute();
-    $stmt->bind_result($id, $phash);
+    $stmt->bind_result($id, $phash); //declare where to store data // get result if any
     if($stmt->fetch()){   
         echo $id.'('.$email.') : '.$phash.'<br />';	
   }

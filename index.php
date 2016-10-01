@@ -1,4 +1,9 @@
-<?php require_once 'dbconst.php'; ?>
+<?php require_once 'dbconst.php';
+
+if(isset($_GET['signup'])){
+	$signup = 'You have succesfully signed up';
+}
+?>
 <!doctype html>
 <html>
 <head>
@@ -8,8 +13,9 @@
 <title>login</title>
 </head>
 <body>
-
+	
 	<div class="contact-wrapper">
+		<p><?php echo $signup ?></p>
 		<form action="loginlogic.php" method="post">
 			Email*</i>
 			<input type="email" name="email">
