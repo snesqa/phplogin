@@ -1,6 +1,6 @@
-<?php require_once 'dbconst.php';
+<?php
 
-if(isset($_GET['signup'])){
+if(isset($_GET['signup'])){ 
 	$signup = 'You have succesfully signed up';
 }
 ?>
@@ -10,12 +10,12 @@ if(isset($_GET['signup'])){
 <meta charset="UTF-8">
 <meta name="author" content="Snezana Ilic" />
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>login</title>
+<title>Login</title>
 </head>
 <body>
 	
 	<div class="contact-wrapper">
-		<p><?php echo $signup ?></p>
+		<p><?php echo $signup ?></p><!-- prints out the user feedback  -->
 		<form action="loginlogic.php" method="post">
 			Email*</i>
 			<input type="email" name="email">

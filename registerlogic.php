@@ -1,7 +1,7 @@
 <?php
-require_once 'dbconst.php';
+require_once 'dbconst.php'; // establish db connection
 
-$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) or die('something went wrong');
+$email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL) or die('something went wrong while storing your email');
 $password = filter_input(INPUT_POST, 'password') or die('pw missing');
 $phash = password_hash($password, PASSWORD_DEFAULT);
 //echo $phash;

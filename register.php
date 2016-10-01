@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><!--  this page holds the register form and upon submitting redirects to registerlogic.php -->
 	<meta charset="UTF-8">
 	<meta name="author" content="Snezana Ilic" />
-	<title>Create user</title>
+	<title>Sign up</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>

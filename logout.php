@@ -1,23 +1,22 @@
 <?php 
+session_start(); //starts session
 
-session_start();
+$_SESSION = array(); // puts session into empty array
 
-$_SESSION = array();
-
-if(ini_get("session.use_cookies")){
+if(ini_get("session.use_cookies")){ // destroy session cookies by manipulating the time the cookie was set - 42000 
 
 	$param = session_get_cookie_params();
-	setcookie(session_name(), '', time() - 42000,
+	setcookie(session_name(), '', time() - 42000, 
 		$param['path'], $param['domain'],
 		$param['secure'], $param['httponly']
 );
 
 }
 
-session_destroy();
-header("Location: index.php");
+session_destroy(); // destroy session
+header("Location: index.php"); // go to start page 
 
-/*
+/* this is another way to end a session.
 session_start();
 
 session_unset();
