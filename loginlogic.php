@@ -26,19 +26,24 @@ ob_start(); //starts output buffer due to using header() function giving the 'he
     $stmt->execute(); // the code is excetuted
     $stmt->bind_result($id, $phash); // variables are declared to store data // get result if any. 
     if($stmt->fetch()){  //conditional statement, fetches affected rows in db 
-        echo $id.'('.$email.') : '.$phash.'<br />'; //printing out the email and hashed password	
+        echo  'User id : ' .$id.'('.$email.'), hashed password : '.$phash.'<br />'; //printing out the email and hashed password	
   }
 //	echo password_verify($password, $phash) ? 'succes': 'fail'; // ternary operator 
 	
 	if(password_verify($password, $phash)){ // verifying password that matched the hash, evaluating the password from the form ($password) againt the hashed password from the database($phash).
 			$_SESSION['uid'] = $id;  // starts session uid and assign it value of id(user id from the db). Detemines if a user-login is valid and stores user id in session
+			echo 'Session id : '. session_id().PHP_EOL;
+		echo ' <a href="restricted.php">Go to secret page</a>';
 	}
-
+	
+/*
 if (!isset($_SESSION['uid'])){ // if the seesion is not set, then go to index else go to restricted page and you are logged on :)
 	header("location: index.php");
 }
 else {
 	header("location: restricted.php");
 }
+*/
+
 ?>
 

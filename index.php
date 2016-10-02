@@ -15,7 +15,8 @@ if(isset($_GET['signup'])){
 <body>
 	
 	<div class="contact-wrapper">
-		<p><?php echo $signup ?></p><!-- prints out the user feedback  -->
+		<p><?php //echo $signup ?></p><!-- prints out the user feedback  -->
+		<p>Please fill in the fields to login</p>
 		<form action="loginlogic.php" method="post">
 			Email*</i>
 			<input type="email" name="email">

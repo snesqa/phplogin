@@ -8,6 +8,7 @@
 </head>
 <body>
 <div class="contact-wrapper">
+<p class="head-text">Sign up to our site!</p>
 <form action="registerlogic.php" method="post">
 Email*
 <input type="email" name="email">

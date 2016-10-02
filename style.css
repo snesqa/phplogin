@@ -57,7 +57,10 @@ input[type="submit"], button {
 	padding:0px 0px 1% 0px;
 }
 .contact-wrapper p{
-	color:#999;
+	color: #412db9;
+	font-size: 1.2em;
+	font-style: normal;
+	font-weight: bolder;
 	
 }
 .contact-wrapper a{
@@ -75,6 +78,7 @@ input[type="submit"], button {
 	color: #A9A9A9;
 	font-weight: lighter;
 }
+
 /*
 .error{
 	color:#FF0072;
