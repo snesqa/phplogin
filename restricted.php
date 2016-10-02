@@ -17,10 +17,11 @@ echo 'Session id : '. session_id();
 
 <?php
 
- if(!isset($_SESSION['uid'])){ 
+ if(!isset($_SESSION['uid'])){ // check if session is not set, if not then redirect to index
 
 	header("location: index.php");
- }else{
+	exit();
+ }else{ // else print out welcome message with link to logout.php 
 	echo "<h1>Welcome to the secret page, you have succesfully logged in!</h1>\n";
 	echo '<a href="logout.php">logout</a>';
 
