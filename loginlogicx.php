@@ -32,13 +32,12 @@ ob_start(); //starts output buffer due to using header() function giving the 'he
 	
 	if(password_verify($password, $phash)){ // verifying password that matched the hash, evaluating the password from the form ($password) againt the hashed password from the database($phash).
 			$_SESSION['uid'] = $id;  // starts session uid and assign it value of id(user id from the db). Detemines if a user-login is valid and stores user id in session
-
-		echo 'Session id : '. session_id().PHP_EOL.'<a href="restricted.php">Go to secret page</a>';
-		// if seesion - print out seesion id and link to pages with session
-	}else{ 
-		echo 'User does not exist, please sign up first <a href="register.php">Go to sign up</a>';
-		// if not seesion then print msg and link to sign up page
+		echo 'Session id : '. session_id().'<a href="restricted.php">Go to secret page</a>';
+		
+	}else{
+		header('location : register.php?register=true');
 	}
+	
 	
 /*
 if (!isset($_SESSION['uid'])){ // if the seesion is not set, then go to index else go to restricted page and you are logged on :)

@@ -78,11 +78,11 @@ input[type="submit"], button {
 	color: #A9A9A9;
 	font-weight: lighter;
 }
-
-/*
 .error{
-	color:#FF0072;
+	color:red;
 }
+/*
+
 .warning{
 	padding-top:3px;
 }

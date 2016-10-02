@@ -1,8 +1,9 @@
 <?php
 
-if(isset($_GET['signup'])){ 
-	$signup = 'You have succesfully signed up';
-}
+// if(isset($_GET['signup'])){ 
+// 	$signup = 'You have succesfully signed up';
+// }
+
 ?>
 <!doctype html>
 <html>
@@ -15,6 +16,7 @@ if(isset($_GET['signup'])){
 <body>
 	
 	<div class="contact-wrapper">
+		
 		<p><?php //echo $signup ?></p><!-- prints out the user feedback  -->
 		<p>Please fill in the fields to login</p>
 		<form action="loginlogic.php" method="post">
