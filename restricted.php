@@ -2,7 +2,7 @@
 session_start();
 ob_start();
 
-echo 'Session id : '. session_id();
+echo 'Session id : '. session_id(); // prints session id set on previous page - loginlogic.php
 
 ?>
 <!DOCTYPE html>
